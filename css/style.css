@@ -1,7 +1,7 @@
 :root {
-    --bg: #ffffff;
-    --fg: #111111;
-    --fg-muted: #666666;
+    --bg: #070707;
+    --fg: #f5f5f5;
+    --fg-muted: #777777;
     --frame-size: 20px;
     --font-display: 'Space Grotesk', sans-serif;
     --font-serif: 'Playfair Display', serif;
@@ -52,7 +52,7 @@ body.loading {
 /* Frame */
 .frame {
     position: fixed;
-    background: #f0f0f0;
+    background: #000;
     z-index: 1000;
 }
 .frame-top { top: 0; left: 0; width: 100%; height: var(--frame-size); }
@@ -83,8 +83,8 @@ body.loading {
 }
 
 .vibe-btn {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--fg);
     border-radius: 30px;
     padding: 8px 16px;
@@ -93,14 +93,12 @@ body.loading {
     gap: 15px;
     cursor: pointer;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
 }
 
 .vibe-btn:hover {
-    border-color: rgba(0, 0, 0, 0.2);
-    background: #ffffff;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .track-name {
@@ -142,8 +140,8 @@ body.loading {
     background-image: url('../assets/hero-bg.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.15;
-    filter: grayscale(100%) contrast(1.1) brightness(1.5);
+    opacity: 0.4;
+    filter: grayscale(100%) contrast(1.2);
     z-index: -1;
 }
 
@@ -160,13 +158,12 @@ body.loading {
     font-size: 0.9rem;
     letter-spacing: 0.5em;
     color: var(--fg);
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
     padding: 10px 20px;
     border-radius: 50px;
     margin-bottom: 20px;
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
 }
 
 .giant-numeral {
@@ -174,7 +171,7 @@ body.loading {
     font-size: clamp(8rem, 20vw, 25rem);
     line-height: 0.8;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.15);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
 }
 
@@ -242,9 +239,8 @@ body.loading {
 /* Statement Section (The Story) */
 .statement-section {
     padding: 15vh 10vw;
-    background: #fbfbfb;
+    background: #000;
     position: relative;
-    box-shadow: inset 0 10px 50px rgba(0,0,0,0.02);
 }
 
 .statement-container {
@@ -337,7 +333,7 @@ body.loading {
 /* Outro & Lyrics Sync */
 .outro-section {
     padding: 15vh 10vw 5vh;
-    background: #ffffff;
+    background: #020202;
     text-align: center;
 }
 
@@ -353,7 +349,7 @@ body.loading {
     font-family: var(--font-serif);
     font-size: clamp(1.2rem, 3vw, 2.5rem);
     line-height: 1.4;
-    color: #dddddd;
+    color: #444444;
     font-style: italic;
     transition: color 0.4s ease, transform 0.4s ease;
     opacity: 0.5;
@@ -383,7 +379,7 @@ body.loading {
 .footer-line {
     width: 100%;
     height: 1px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     margin-bottom: 30px;
 }
 

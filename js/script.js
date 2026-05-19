@@ -37,6 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Sync Lyrics logic
+    const lyricLines = document.querySelectorAll('.lyric-line');
+    
+    audioEl.addEventListener('timeupdate', () => {
+        const currentTime = audioEl.currentTime;
+        
+        lyricLines.forEach((line, index) => {
+            const time = parseFloat(line.getAttribute('data-time'));
+            const nextLine = lyricLines[index + 1];
+            const nextTime = nextLine ? parseFloat(nextLine.getAttribute('data-time')) : 999;
+            
+            if (currentTime >= time && currentTime < nextTime) {
+                line.classList.add('active');
+            } else {
+                line.classList.remove('active');
+            }
+        });
+    });
+
     // Reveal Elements on Scroll
     const revealElements = document.querySelectorAll('.reveal-up');
     
